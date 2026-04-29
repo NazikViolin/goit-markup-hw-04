@@ -51,6 +51,9 @@ img {
 
 .page-header {
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .header {
@@ -93,6 +96,31 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #2e2f42;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link.current {
+    position: relative;
+    color: #404bbf;
+}
+
+.nav-link.current::after {
+    content: "";
+
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+    background-color: #4d5ae5;
+    border-radius: 2px;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: #404bbf;
 }
 
 .contacts {
@@ -114,12 +142,32 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contacts-link:hover,
+.contacts-link:focus {
+    color: #404bbf;
 }
 
 /* =======HERO SECTION======= */
 
 .hero-section {
-    background-color: #2e2f42;
+    /*background-color: #2e2f42;
+    padding: 188px 0;
+    text-align: center;8*/
+    background-image:
+        linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url("../images/peopleOff.jpg");
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    max-width: 1440px;
+    margin: 0 auto;
+
     padding: 188px 0;
     text-align: center;
 }
@@ -199,12 +247,18 @@ img {
 
 .team-list {
     display: flex;
+    flex-wrap: wrap;
     gap: 24px;
 
 }
 
 .team-item {
     border-radius: 0 0 4px 4px;
+    padding-inline: 0px;
+    width: 264px;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+        0 1px 1px 0 rgba(46, 47, 66, 0.16),
+        0 1px 6px 0 rgba(46, 47, 66, 0.08);
     background-color: #fff;
 }
 
@@ -227,6 +281,41 @@ img {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+}
+
+.social-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    padding-top: 8px;
+    /*height: 40px;*/
+    /*display: flex;
+    align-items: center;*/
+    /*margin-top: 16px;*/
+    /*gap: 8px;*/
+}
+
+.link-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4d5ae5;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link-social:hover,
+.link-social:focus {
+    background-color: #404bbf;
+}
+
+.icon-soc {
+    width: 16px;
+    height: 16px;
+    fill: #fff;
 }
 
 /*=====OUR PORTFOLIO=======*/

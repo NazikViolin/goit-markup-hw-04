@@ -439,6 +439,10 @@ img {
     text-transform: uppercase;
 }
 
+.footer-left {
+    max-width: 264px;
+}
+
 .logo-part {
     color: #f4f4fd;
 }
@@ -452,4 +456,29 @@ img {
     max-width: 264px;
     margin: 0;
     color: #f4f4fd;
+}
+
+.footer-container {
+    display: flex;
+    align-items: baseline;
+    gap: 120px;
+}
+
+.soc-text-footer {
+    font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: #fff;
+        margin-bottom: 16px;
+            justify-content: center;
+            align-items: center;
+}
+
+.social-list-footer {
+    display: flex;
+        justify-content: center;
+        align-items: center;
+    gap: 16px;
 }
